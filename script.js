@@ -25,11 +25,15 @@ function updateStatus() {
 
     deleteContentButton.addEventListener("click", function() {
 
-        //delete the date element which is its next sibling
-        deleteContentButton.parentElement.parentElement.removeChild(deleteContentButton.parentElement.nextElementSibling);
-        
-        //delete the content 
-        deleteContentButton.parentElement.parentElement.removeChild(deleteContentButton.parentElement);
+        if (confirm("are you sure you want to remove this post")) {
+            //delete the date element which is its next sibling
+            deleteContentButton.parentElement.parentElement.removeChild(deleteContentButton.parentElement.nextElementSibling);
+
+            //delete the content 
+            deleteContentButton.parentElement.parentElement.removeChild(deleteContentButton.parentElement);
+
+            alert("your post has been removed");
+        }
     });
 
     divElement.appendChild(deleteContentButton);
