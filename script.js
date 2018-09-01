@@ -15,11 +15,22 @@ function updateStatus() {
 
     divElement.appendChild(document.createTextNode(fieldContent));
 
+    //generate the delete content button
+
     var deleteContentButton = document.createElement("button");
 
     deleteContentButton.setAttribute("class", "delete-content");
 
     deleteContentButton.appendChild(document.createTextNode("X"));
+
+    deleteContentButton.addEventListener("click", function() {
+
+        //delete the date element which is its next sibling
+        deleteContentButton.parentElement.parentElement.removeChild(deleteContentButton.parentElement.nextElementSibling);
+        
+        //delete the content 
+        deleteContentButton.parentElement.parentElement.removeChild(deleteContentButton.parentElement);
+    });
 
     divElement.appendChild(deleteContentButton);
 
