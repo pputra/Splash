@@ -1,6 +1,9 @@
-function updateStatus() {
-    var journalListElements = document.getElementById("journal-list");
+//an arr to get the index of a content that we want to delete
+var contentIndex = [];
 
+function updateStatus() {
+    var statusListElements = document.getElementById("main-container");
+    console.log(statusListElements);
     //create a container for the status update
     var statusContainer = document.createElement("div");
 
@@ -16,7 +19,6 @@ function updateStatus() {
     divElement.appendChild(document.createTextNode(fieldContent));
 
     //generate the delete content button
-
     var deleteContentButton = document.createElement("button");
 
     deleteContentButton.setAttribute("class", "delete-content");
@@ -24,15 +26,13 @@ function updateStatus() {
     deleteContentButton.appendChild(document.createTextNode("X"));
 
     deleteContentButton.addEventListener("click", function() {
+        var hasConfirmation = confirm("Are you sure you want to remove this post?");
 
-        if (confirm("are you sure you want to remove this post")) {
-            //delete the date element which is its next sibling
-            deleteContentButton.parentElement.parentElement.removeChild(deleteContentButton.parentElement.nextElementSibling);
-
-            //delete the content 
-            deleteContentButton.parentElement.parentElement.removeChild(deleteContentButton.parentElement);
-
-            alert("your post has been removed");
+        if (hasConfirmation) {
+            var indexToRemove = contentIndex.indexOf(deleteContentButton.parentElement.parentElement);
+            var contentToRemove = contentIndex[indexToRemove];
+            statusListElements.removeChild(contentToRemove);
+            alert("Your post has been removed");
         }
     });
 
@@ -41,7 +41,6 @@ function updateStatus() {
     statusContainer.appendChild(divElement);
 
     //generate date;
-
     var dateElement = document.createElement("div");
 
     dateElement.setAttribute("class", "date");
@@ -50,7 +49,10 @@ function updateStatus() {
 
     statusContainer.appendChild(dateElement);
 
-    journalListElements.appendChild(statusContainer);
+    //assigning index to the elements
+    contentIndex.push(statusContainer);
+
+    statusListElements.appendChild(statusContainer);
 }
 
 
@@ -59,6 +61,6 @@ var shareButton = document.getElementById("share-button");
 shareButton.addEventListener("click", function() {
     updateStatus();
     document.getElementById("input").value = '';
-    alert("your post has been shared!");
+    alert("Your post has been shared!");
 });
 

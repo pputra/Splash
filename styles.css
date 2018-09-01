@@ -73,7 +73,7 @@ header {
     border: 0.5px solid;
 }
 
-#journal-list {
+#main-container {
     max-width: 200px;
     margin: 0 auto;
     margin-top: 5px;
