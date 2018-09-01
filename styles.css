@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 5px;
+    text-align: center;
+    overflow: auto;
+    overflow-x: hidden;
+    background-color: black;
+    
+}
+
+.logo {
+    width: 400px;
+    margin: 0 auto;
+    padding: 0;
+    padding: left 0px;
+    height: 100%;
+    padding-top: 40px;
+    color: #3D5B83;
+    font-family: 'Lobster', cursive;
+}
+
+.logo h1 {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 30px;
+}
+
+.content {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#share-field {
+    position: relative;
+    margin: 0 auto;
+    width: 200px;
+}
+
+#share-field input {
+    width: 100%;
+    height: 62px;
+    margin-bottom: 5px;
+    border: 0.5px solid;
+    color: #EAB92F;
+}
+
+button {
+    background-color: black;
+    color: #EAB92F;
+    border: none;
+    padding: 5px;
+}
+
+button:hover {
+    background-color: #EAB92F;
+    color: black;
+    border: 0.5px solid;
+}
+
+#journal-list {
+    max-width: 200px;
+    margin: 0 auto;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: rgba(0, 0, 0, 0.733);
+    color: #EAB92F;
+    overflow: auto;
+    max-height: 150px;
+}
+
+.journal {
+    border-bottom: 0.5px solid;
+    word-wrap: break-word;
+    padding: 5px;
+    min-height: 30px;
+    border-radius: 0%;
+}
+
+.journal:hover {
+    background-color: rgba(234, 184, 47, 0.726);
+    color: black;
+}
+
+.date {
+    font-size: 5px;
+}
+
+
+
+
+
+
