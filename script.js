@@ -1,16 +1,11 @@
 function updateStatus() {
     var journalListElements = document.getElementById("journal-list");
+
+    //create a container for the status update
+    var statusContainer = document.createElement("div");
+
+    statusContainer.setAttribute("class", "status-container");
     
-    //generate date;
-
-    var dateElement = document.createElement("div");
-
-    dateElement.setAttribute("class", "date");
-
-    dateElement.appendChild(document.createTextNode(new Date()));
-
-    journalListElements.appendChild(dateElement);
-
     //generate the text field
     var fieldContent = document.getElementById("input").value;
 
@@ -20,8 +15,19 @@ function updateStatus() {
 
     divElement.appendChild(document.createTextNode(fieldContent));
 
-    journalListElements.appendChild(divElement);
+    statusContainer.appendChild(divElement);
 
+    //generate date;
+
+    var dateElement = document.createElement("div");
+
+    dateElement.setAttribute("class", "date");
+
+    dateElement.appendChild(document.createTextNode(new Date()));
+
+    statusContainer.appendChild(dateElement);
+
+    journalListElements.appendChild(statusContainer);
 }
 
 
