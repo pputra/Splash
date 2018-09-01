@@ -60,14 +60,14 @@ header {
     color: #EAB92F;
 }
 
-button {
+#share-button {
     background-color: black;
     color: #EAB92F;
     border: none;
     padding: 5px;
 }
 
-button:hover {
+#share-button:hover {
     background-color: #EAB92F;
     color: black;
     border: 0.5px solid;
@@ -91,6 +91,7 @@ button:hover {
     padding: 5px;
     min-height: 30px;
     border-radius: 0%;
+    position: relative;
 }
 
 .journal:hover {
@@ -100,6 +101,17 @@ button:hover {
 
 .date {
     font-size: 5px;
+}
+
+.delete-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 5px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    padding: 5px;
 }
 
 

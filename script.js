@@ -15,6 +15,14 @@ function updateStatus() {
 
     divElement.appendChild(document.createTextNode(fieldContent));
 
+    var deleteContentButton = document.createElement("button");
+
+    deleteContentButton.setAttribute("class", "delete-content");
+
+    deleteContentButton.appendChild(document.createTextNode("X"));
+
+    divElement.appendChild(deleteContentButton);
+
     statusContainer.appendChild(divElement);
 
     //generate date;
