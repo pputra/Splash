@@ -31,7 +31,10 @@ function updateStatus() {
         if (hasConfirmation) {
             var indexToRemove = contentIndex.indexOf(deleteContentButton.parentElement.parentElement);
             var contentToRemove = contentIndex[indexToRemove];
+            //remove the element from the html
             statusListElements.removeChild(contentToRemove);
+            //remove the element from the arr index
+            contentIndex.splice(indexToRemove, 1);
             alert("Your post has been removed");
         }
     });
