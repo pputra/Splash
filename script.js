@@ -63,6 +63,7 @@ var shareButton = document.getElementById("share-button");
 
 shareButton.addEventListener("click", function() {
     updateStatus();
+    document.getElementById("main-container").scrollTop = 0;
     document.getElementById("input").value = '';
     alert("Your post has been shared!");
 });
