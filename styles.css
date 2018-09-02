@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    outline-width: 0;
 }
 
 body {
@@ -57,19 +58,25 @@ header {
     height: 62px;
     margin-bottom: 5px;
     border: 0.5px solid;
-    color: #EAB92F;
+    color: black;
+    border-radius: 100%;
+}
+
+#share-field input[placeholder] {
+    text-align: center;
 }
 
 #share-button {
-    background-color: black;
-    color: #EAB92F;
     border: none;
     padding: 5px;
+    border-radius: 100%;
+    background-color: #EAB92F;
+    color: black;
 }
 
 #share-button:hover {
-    background-color: #EAB92F;
-    color: black;
+    background-color: #3D5B83;
+    color: #EAB92F;
     border: 0.5px solid;
 }
 
@@ -79,10 +86,11 @@ header {
     margin-top: 5px;
     display: flex;
     flex-direction: column-reverse;
-    background-color: rgba(0, 0, 0, 0.733);
-    color: #EAB92F;
+    background-color: white;
+    color: black;
     overflow: auto;
     max-height: 150px;
+    border-radius: 3%;
 }
 
 .journal {
@@ -95,7 +103,7 @@ header {
 }
 
 .journal:hover {
-    background-color: rgba(234, 184, 47, 0.726);
+    background-color: rgba(211, 208, 198, 0.342);
     color: black;
 }
 
@@ -108,7 +116,7 @@ header {
     top: 0;
     right: 0;
     font-size: 5px;
-    color: white;
+    color: black;
     background-color: transparent;
     border: none;
     padding: 5px;
