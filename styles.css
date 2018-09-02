@@ -102,7 +102,7 @@ header {
     position: relative;
 }
 
-.journal:hover {
+.status-container:hover {
     background-color: rgba(211, 208, 198, 0.342);
     color: black;
 }
@@ -123,7 +123,7 @@ header {
     visibility: hidden;
 }
 
-.journal:hover .delete-content {
+.status-container:hover .delete-content {
     visibility: visible;
 }
 
