@@ -92,7 +92,6 @@ header {
     overflow: auto;
     max-height: 150px;
     border-radius: 3%;
-    border: 1.5px solid;
 }
 
 .journal {
