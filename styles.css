@@ -60,6 +60,7 @@ header {
     border: 0.5px solid;
     color: black;
     border-radius: 100%;
+    border: 1.5px solid;
 }
 
 #share-field input[placeholder] {
@@ -67,7 +68,7 @@ header {
 }
 
 #share-button {
-    border: none;
+    border: 1.5px solid;
     padding: 5px;
     border-radius: 100%;
     background-color: #EAB92F;
@@ -76,8 +77,8 @@ header {
 
 #share-button:hover {
     background-color: #3D5B83;
-    color: #EAB92F;
-    border: 0.5px solid;
+    color: black;
+    border: 1.5px solid;
 }
 
 #main-container {
@@ -91,6 +92,7 @@ header {
     overflow: auto;
     max-height: 150px;
     border-radius: 3%;
+    border: 1.5px solid;
 }
 
 .journal {
@@ -119,12 +121,17 @@ header {
     color: black;
     background-color: transparent;
     border: none;
-    padding: 5px;
+    padding: 2px;
     visibility: hidden;
 }
 
 .status-container:hover .delete-content {
     visibility: visible;
+}
+
+.delete-content:hover {
+    background-color: red;
+    padding: 2px;
 }
 
 
