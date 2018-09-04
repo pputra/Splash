@@ -85,7 +85,7 @@ header {
     margin: 0 auto;
     margin-top: 5px;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     background-color: white;
     color: black;
     overflow: auto;

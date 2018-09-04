@@ -53,9 +53,9 @@ function updateStatus() {
     statusContainer.appendChild(dateElement);
 
     //assigning index to the elements
-    contentIndex.push(statusContainer);
-
-    statusListElements.appendChild(statusContainer);
+    contentIndex.unshift(statusContainer);
+    //make sure the element will be on top
+    statusListElements.insertBefore(statusContainer, statusListElements.firstChild);
 }
 
 
@@ -63,7 +63,6 @@ var shareButton = document.getElementById("share-button");
 
 shareButton.addEventListener("click", function() {
     updateStatus();
-    document.getElementById("main-container").scrollTop = 0;
     document.getElementById("input").value = '';
     alert("Your post has been shared!");
 });
